@@ -37,9 +37,9 @@ struct ContentView: View {
                             LazyVGrid(columns: gridLayout, spacing: 15) {
                                 ForEach(products) { product in
                                         ProductItemView(product: product)
-                                    feedback.impactOccurred()
-                                    
                                         .onTapGesture {
+                                            feedback.impactOccurred()
+                                            
                                             withAnimation(.easeOut) {
                                                 shop.showingProduct = true
                                                 shop.selectedProduct = product 
